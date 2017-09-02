@@ -83,105 +83,83 @@ class GridWindow(Gtk.Window):
         x="**"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("^")
     def divide(self, widgetd):
         x="/"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("/")
     def multiplicar(self, widget):
         x="*"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("*")
     def suma(self, widget):
         x="+"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("+")
     def resta(self, widget):
         x="-"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("-")
     def coma(self, widget):
         x="."
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print(".")
     def igual(self, widget):
-        print(self.operacion)
-        print(eval(self.operacion))
-        x=eval(self.operacion)
-        self.operation=self.operation+x
-        self.label.set_text(self.operacion)
-        print("=")
+        x=str(eval(self.operacion))
+        self.label.set_text(x)
     def borrar(self, widget):
-        x=self.operacion.pop()
+        self.operacion=""
         self.label.set_text(self.operacion)
-        print("borrar")
     def abierto(self, widget):
         x="("
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("(")
     def cerrado(self, widget):
         x=")"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print(")")
     def uno(self, widget):
         x="1"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("1")
     def dos(self, widget):
         x="2"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("2")
     def tres(self, widget):
         x="3"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("3")
     def cuatro(self, widget):
         x="4"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("4")
     def cinco(self, widget):
         x="5"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("5")
     def seis(self, widget):
         x="6"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("6")
     def siete(self, widget):
         x="7"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("7")
     def ocho(self, widget):
         x="8"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("8")
     def nueve(self, widget):
         x="9"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("9")
     def cero(self, widget):
         x="0"
         self.operacion=self.operacion+x
         self.label.set_text(self.operacion)
-        print("0")
 
 win = GridWindow()
 win.connect("delete-event", Gtk.main_quit)
 win.show_all()
 Gtk.main()
+
